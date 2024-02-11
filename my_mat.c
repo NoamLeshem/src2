@@ -16,13 +16,9 @@ int initMatrix(int mat[][LEN])
 			for (int j = 0; j < LEN; j++)
 			{
 				if (mat[i][j] == 0 && i != j && mat[i][k] != 0 && mat[k][j] != 0)
-                {
                     mat[i][j] = mat[i][k] + mat[k][j];
-                }
                 if (mat[k][j] != 0 && mat[i][k] != 0 && mat[i][j] > mat[i][k] + mat[k][j])
-                {
                     mat[i][j] = mat[i][k] + mat[k][j];
-                }
 			}
 	return 0;
 }
