@@ -15,11 +15,11 @@ int initMatrix(int mat[][LEN])
 		for (int i = 0; i < LEN; i++)
 			for (int j = 0; j < LEN; j++)
 			{
-				if (mat[i][j] == 0 && (i != j) && (mat[i][k] != 0 && mat[k][j] != 0))
+				if (mat[i][j] == 0 && i != j && mat[i][k] != 0 && mat[k][j] != 0)
                 {
                     mat[i][j] = mat[i][k] + mat[k][j];
                 }
-                else if (((mat[k][j] != 0) && (mat[i][k] != 0) && (mat[i][j] > (mat[i][k] + mat[k][j]))))
+                if (mat[k][j] != 0 && mat[i][k] != 0 && mat[i][j] > mat[i][k] + mat[k][j])
                 {
                     mat[i][j] = mat[i][k] + mat[k][j];
                 }
