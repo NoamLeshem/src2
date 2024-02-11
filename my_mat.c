@@ -14,9 +14,12 @@ int initMatrix(int mat[][LEN], int copy[][LEN])
 	for (int k = 0; k < LEN; k++)
 		for (int i = 0; i < LEN; i++)
 			for (int j = 0; j < LEN; j++)
-				if (mat[i][k] && mat[k][j])
-					if (mat[i][j] > mat[i][k] + mat[k][j])
-						copy[i][j] = copy[i][k] + copy[k][j];
+			{
+				if (mat[i][k] && mat[k][j] && !mat[i][j] && i != j)
+					mat[i][j] = mat[i][k] + mat[k][j];
+				else if (mat[i][j] > mat[i][k] + mat[k][j])
+					mat[i][j] = mat[i][k] + mat[k][j];
+			}
 	return 0;
 }
 
