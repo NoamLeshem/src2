@@ -11,9 +11,9 @@ int main(int argc, char *argv[])
         if (choice == 'A')
             initMatrix(mat, copy);
         else if (choice == 'B')
-            findPath(copy, 0);
+            findPath(mat, 0);
         else if (choice == 'C')
-            findPath(copy, 1);
+            findPath(mat, 1);
         else if (choice == 'D')
             return 0;
     }
