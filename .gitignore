@@ -1,0 +1,4 @@
+*.o
+*.so
+my_graph
+my_Knapsack

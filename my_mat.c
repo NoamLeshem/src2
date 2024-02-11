@@ -36,5 +36,6 @@ int findPath(int mat[][LEN], int flag)
 			printf("True");
 		else
 			printf("False");
+	printf("\n");
 	return 0;
 }
