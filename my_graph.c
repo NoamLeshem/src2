@@ -4,12 +4,12 @@ int main(int argc, char *argv[])
 {
     char choice = 0;
     int mat[LEN][LEN] = {{0}};
-    int copy[LEN][LEN] = {{0}};
+    // int copy[LEN][LEN] = {{0}};
     while(1)
     {
         scanf("%c", &choice);
         if (choice == 'A')
-            initMatrix(mat, copy);
+            initMatrix(mat);
         else if (choice == 'B')
             findPath(mat, 0);
         else if (choice == 'C')
