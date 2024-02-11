@@ -1,6 +1,6 @@
 #include "my_mat.h"
 
-int initMatrix(int mat[][LEN])
+int initMatrix(int mat[][LEN], int copy[][LEN])
 {
 	// printf("hello there!");
 	for (int i = 0; i < LEN; i++)
@@ -8,14 +8,15 @@ int initMatrix(int mat[][LEN])
 		{
 			// printf("enter the value for cell (%d,%d)", i, j);
 			scanf("%d", &mat[i][j]);
+			copy[i][j] = mat[i][j];
 		}
 
 	for (int k = 0; k < LEN; k++)
 		for (int i = 0; i < LEN; i++)
 			for (int j = 0; j < LEN; j++)
-				if (mat[i][k] && mat[k][j])
-					if (mat[i][j] > mat[i][k] + mat[k][j])
-						mat[i][j] = mat[i][k] + mat[k][j];
+				if (copy[i][k] && copy[k][j])
+					if (copy[i][j] > copy[i][k] + copy[k][j])
+						copy[i][j] = copy[i][k] + copy[k][j];
 	return 0;
 }
 
